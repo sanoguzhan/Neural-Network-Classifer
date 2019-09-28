@@ -1,8 +1,31 @@
+"""
+    Implements L-layer neural network : (Linear -> Relu ) * (L-1) -> Linear -> Sigmoid
+    
+    Args:
+        X -- Training data set
+        Y -- True target vector of data
+        layer_dimensions --  List of dimensions of the layer
+        learning_rate -- learning rate of gradient descent
+        Niter -- Numbe rof iterations of the optimization loop
+        print_cost -- True default, prints the cost every 100 iterations
+     
+     Example:
+     
+            Example = NNetwork(X_train, Y_train, layer_dimensions, learning_rate = 0.006, Niter=2000)
+            Example.NN_image()
+            Example.predict(X_train, Y_train, parameters)
+
+            ---> NN_image() : Train the model the and gives the parameters ( Weight and Bias matrixes).
+            ---> predict()  : Predict the output based on given data set X and gives the accuracy of the prediction
+"""
+
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 import h5py
 import numpy as np
 sns.set()
+
 
 class Prediction:
     """Predict the data based on given feature data"""
@@ -209,14 +232,14 @@ class NNetwork(Prediction):
 
     def NN_image(self):
         """
-        Implements L-layer neural network : (Linear -> Relu * L-1) * (L-1) -> Linear -> Sigmoid
+        Implements L-layer neural network : (Linear -> Relu ) * (L-1) -> Linear -> Sigmoid
         Args:
             X -- Training data set
             Y -- True target vector of data
             layer_dimensions --  List of dimensions of the layer
             learning_rate -- learning rate of gradient descent
             Niter -- Numbe rof iterations of the optimization loop
-            print_cost -- True default, prints the cost every 150 iterations
+            print_cost -- True default, prints the cost every 100 iterations
         Returns:
             Parameters -- Python dictionary of optimized Weight and bias matrixes
         """
