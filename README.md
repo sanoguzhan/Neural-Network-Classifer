@@ -1,3 +1,3 @@
 # NNetwork_ImageRecognation Cat/Notcat
-Neural Network mathematical coding for image recognition 
-Implemented forward, backward propagation, parameter update etc. for a image recognation neural networks. The model indetifies cat pictures.
+Feedforward Neural Network model for image recognition 
+I implemented forward, backward propagation, parameter update etc. for a image recognation neural network. The model indetifies cat pictures.
